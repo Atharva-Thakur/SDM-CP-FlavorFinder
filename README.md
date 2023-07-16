@@ -1,1 +1,1 @@
-# SDM---CP---FlavorFinder
+# SDM-CP-FlavorFinder
