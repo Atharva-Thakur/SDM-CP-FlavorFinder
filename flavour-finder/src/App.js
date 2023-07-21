@@ -6,7 +6,16 @@ import HeroLayout1 from './ui-components/HeroLayout1'
 import Footer from './ui-components/Footer'
 import FoodCreateForm from './ui-components/FoodCreateForm'
 
-function App() {
+import {
+  withAuthenticator,
+  Button,
+  Heading,
+  Image,
+  View,
+  Card,
+} from "@aws-amplify/ui-react";
+
+function App({ signOut }) {
   return (
     <div className="h-100 d-flex flex-column centered-container" style={{
       display: 'flex',
@@ -16,6 +25,7 @@ function App() {
       height: '100%',
       gap: '20px',
     }}>
+      <Button onClick={signOut}>Sign Out</Button>
       <HeroLayout1 style={{ width: '100% !important' }} />
 
       <FoodCardCollection />
@@ -25,4 +35,4 @@ function App() {
   );
 }
 
-export default App;
+export default withAuthenticator(App);

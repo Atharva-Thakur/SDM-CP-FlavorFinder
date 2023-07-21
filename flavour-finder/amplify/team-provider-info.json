@@ -10,6 +10,14 @@
       "StackName": "amplify-flavourfinder-staging-171212",
       "StackId": "arn:aws:cloudformation:ap-south-1:252731290637:stack/amplify-flavourfinder-staging-171212/91ab8d80-2720-11ee-8959-06f95c1d9b20",
       "AmplifyAppId": "d1rfr6lx8irpoe"
+    },
+    "categories": {
+      "auth": {
+        "flavourfindera97d3539": {}
+      },
+      "api": {
+        "FlavourFinder": {}
+      }
     }
   }
 }
