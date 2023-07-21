@@ -1,23 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
 
+import FoodCardCollection from './ui-components/FoodCardCollection'
+import HeroLayout1 from './ui-components/HeroLayout1'
+import Footer from './ui-components/Footer'
+import FoodCreateForm from './ui-components/FoodCreateForm'
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="h-100 d-flex flex-column centered-container" style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: '100%',
+      gap: '20px',
+    }}>
+      <HeroLayout1 style={{ width: '100% !important' }} />
+
+      <FoodCardCollection />
+      <FoodCreateForm />
+      <Footer />
     </div>
   );
 }
