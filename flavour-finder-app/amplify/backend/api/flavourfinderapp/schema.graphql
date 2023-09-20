@@ -1,0 +1,29 @@
+type Contact @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  phone: AWSPhone
+  message: String
+}
+
+type Restarurant @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  Dishes: [Dishes] @hasMany
+}
+
+type Dishes @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  description: String!
+  rating: Int!
+  price: Int!
+  Dish: Restarurant @belongsTo
+  reviews: [Reviews] @hasMany
+  ImgUrl: AWSURL
+}
+
+type Reviews @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  dish: Dishes @belongsTo
+  content: String!
+} 
