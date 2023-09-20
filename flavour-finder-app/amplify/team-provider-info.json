@@ -1,0 +1,23 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplify229e97e979c04-staging-192504-authRole",
+      "UnauthRoleArn": "arn:aws:iam::406929768751:role/amplify-amplify229e97e979c04-staging-192504-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::406929768751:role/amplify-amplify229e97e979c04-staging-192504-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-amplify229e97e979c04-staging-192504-deployment",
+      "UnauthRoleName": "amplify-amplify229e97e979c04-staging-192504-unauthRole",
+      "StackName": "amplify-amplify229e97e979c04-staging-192504",
+      "StackId": "arn:aws:cloudformation:us-east-1:406929768751:stack/amplify-amplify229e97e979c04-staging-192504/66b87600-57eb-11ee-b879-1269fdbc7711",
+      "AmplifyAppId": "d363z1ml2rah4r"
+    },
+    "categories": {
+      "auth": {
+        "flavourfinderappe9696469": {}
+      },
+      "api": {
+        "flavourfinderapp": {}
+      }
+    }
+  }
+}
