@@ -4,11 +4,10 @@
  * Any changes to this file will be overwritten when running amplify pull. *
  **************************************************************************/
 
-export { default as Contact } from "./Contact";
-export { default as ContactUpdateForm } from "./ContactUpdateForm";
+
 export { default as DishesCreateForm } from "./DishesCreateForm";
 export { default as DishesUpdateForm } from "./DishesUpdateForm";
-export { default as Footer } from "./Footer";
+
 export { default as Header } from "./Header";
 export { default as HomepageCard } from "./HomepageCard";
 export { default as HomepageCardCollection } from "./HomepageCardCollection";

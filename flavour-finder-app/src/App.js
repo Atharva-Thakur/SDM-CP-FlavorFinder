@@ -9,8 +9,6 @@ import {
   Card,
 } from "@aws-amplify/ui-react";
 import {
-  Contact,
-  Footer,
   Header,
   HomepageCardCollection,
   Label,
@@ -33,7 +31,6 @@ function App({ signOut }) {
       <Label></Label>
       <HomepageCardCollection></HomepageCardCollection>
       <Heading level={1}>Contact Us</Heading>
-      <Contact></Contact>
       
     </View>
   );
