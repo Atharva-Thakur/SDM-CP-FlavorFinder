@@ -1,0 +1,87 @@
+.meals-container {
+    display: flex;
+    gap: 5%;
+}
+
+.meals-carousal {
+    width: 65%;
+    margin-bottom: 50px;
+}
+
+.meals-carousal img {
+    width: 100%;
+    height: 70vh;
+    border-radius: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.slick-prev:before,
+.slick-next:before,
+.slick-dots li.slick-active button:before {
+    color: var(--color-primary) !important;
+}
+
+.meals-content {
+    width: 30%;
+}
+
+.meals-content p {
+    padding: 20px 0;
+}
+
+.meals-card-container {
+    display: flex;
+    gap: 5%;
+    padding-top: 30px;
+}
+
+.meals-card {
+    width: 30%;
+}
+
+.meals-card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.meals-card-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 30px;
+}
+
+.meals-card-content p {
+    padding-top: 10px;
+    padding-left: 30px;
+}
+
+@media screen and (max-width: 768px ) {
+    .meals-container {
+        flex-direction: column;
+    }
+
+    .meals-carousal {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .meals-content {
+        width: 100%;
+    }
+
+    .meals-card-container {
+        flex-direction: column;
+    }
+
+    .meals-card {
+        width: 100%;
+    }
+
+    .meals-card-left {
+        margin-bottom: 20px;
+    }
+}
