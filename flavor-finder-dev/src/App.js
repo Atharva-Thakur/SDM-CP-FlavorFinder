@@ -1,7 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import { Nav,  ProductCardCollection, RestaurantCreateForm} from './ui-components'
+import { Nav,  ProductCardCollection, RestaurantCreateForm, SuggestedRestaurantsCreateForm} from './ui-components'
+import { Routes, Route, Link } from "react-router-dom";
 
+
+<Routes>
+   <Route path="/" Component={<App />} />
+   <Route path="/product" Component={<ProductCardCollection />} />
+   <Route path="/suggest" Component={<SuggestedRestaurantsCreateForm />} />
+</Routes>
 
 function App() {
   return (
@@ -14,6 +21,7 @@ function App() {
         <RestaurantCreateForm />  
       </div>
     </div>
+
   );
 }
 

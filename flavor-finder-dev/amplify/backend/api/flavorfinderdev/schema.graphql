@@ -9,8 +9,8 @@ type SuggestedRestaurants @model @auth(rules: [{allow: public}]) {
 type Reviews @model @auth(rules: [{allow: public}]) {
   id: ID!
   rating: Int
-  Restaurant: Restaurant @hasOne
   reviewBody: String
+  Restaurant: Restaurant @belongsTo
 }
 
 type User @model @auth(rules: [{allow: public}]) {
@@ -25,4 +25,6 @@ type Restaurant @model @auth(rules: [{allow: public}]) {
   price: String
   featues: String
   image: AWSURL
+  Reviews: Reviews @hasOne
 }
+ 
