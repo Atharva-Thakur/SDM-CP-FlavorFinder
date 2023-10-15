@@ -1,14 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-import { Nav,  ProductCardCollection} from './ui-components'
+import { Nav,  ProductCardCollection, RestaurantCreateForm} from './ui-components'
 
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Nav width="100%" marginBottom='20px' />
-      <div className='container'>
+      <div>
         <ProductCardCollection />  
+      </div>
+      <div>
+        <RestaurantCreateForm />  
       </div>
     </div>
   );

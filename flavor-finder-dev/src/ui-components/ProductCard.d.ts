@@ -5,7 +5,6 @@
  **************************************************************************/
 
 import * as React from "react";
-import { Restaurant } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { ButtonProps, DividerProps, FlexProps, IconProps, ImageProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
@@ -25,7 +24,7 @@ export declare type ProductCardOverridesProps = {
     Button4062904?: PrimitiveOverrideProps<ButtonProps>;
 } & EscapeHatchProps;
 export declare type ProductCardProps = React.PropsWithChildren<Partial<ViewProps> & {
-    restaurant?: Restaurant;
+    restaurant?: any;
 } & {
     overrides?: ProductCardOverridesProps | undefined | null;
 }>;

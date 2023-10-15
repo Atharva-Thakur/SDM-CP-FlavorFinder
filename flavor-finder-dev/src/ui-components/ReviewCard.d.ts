@@ -5,7 +5,6 @@
  **************************************************************************/
 
 import * as React from "react";
-import { Reviews } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { DividerProps, FlexProps, TextProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
@@ -18,7 +17,7 @@ export declare type ReviewCardOverridesProps = {
     Divider?: PrimitiveOverrideProps<DividerProps>;
 } & EscapeHatchProps;
 export declare type ReviewCardProps = React.PropsWithChildren<Partial<FlexProps> & {
-    reviews?: Reviews;
+    reviews?: any;
 } & {
     overrides?: ReviewCardOverridesProps | undefined | null;
 }>;

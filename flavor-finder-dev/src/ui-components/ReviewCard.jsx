@@ -21,7 +21,7 @@ export default function ReviewCard(props) {
       position="relative"
       borderRadius="15px"
       padding="0px 0px 0px 0px"
-      backgroundColor="rgba(17,35,49,1)"
+      backgroundColor="rgba(250,250,250,1)"
       {...getOverrideProps(overrides, "ReviewCard")}
       {...rest}
     >
