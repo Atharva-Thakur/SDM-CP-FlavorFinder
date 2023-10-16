@@ -70,7 +70,7 @@ export default function RestaurantUpdateForm(props) {
     location: [],
     price: [],
     featues: [],
-    image: [{ type: "URL" }],
+    image: [],
   };
   const runValidationTasks = async (
     fieldName,

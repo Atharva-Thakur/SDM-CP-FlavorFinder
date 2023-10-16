@@ -6,11 +6,15 @@
 
 /* eslint-disable */
 import * as React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import Logo from "./Logo";
+import {
+  getOverrideProps,
+  useAuthSignOutAction,
+} from "@aws-amplify/ui-react/internal";
 import { Flex, Icon, Text, View } from "@aws-amplify/ui-react";
 export default function Nav(props) {
   const { overrides, ...rest } = props;
+  const baseOnClick = useAuthSignOutAction({ global: false });
+  const cOnClick = useAuthSignOutAction({ global: false });
   return (
     <Flex
       gap="352px"
@@ -25,18 +29,27 @@ export default function Nav(props) {
       {...getOverrideProps(overrides, "Nav")}
       {...rest}
     >
-      <Logo
-        width="335.5px"
-        height="36.5px"
+      <Text
+        fontFamily="Inter"
+        fontSize="30px"
+        fontWeight="700"
+        color="rgba(255,255,255,1)"
+        lineHeight="25px"
+        textAlign="left"
         display="block"
+        direction="column"
+        justifyContent="unset"
+        width="424px"
+        height="43px"
         gap="unset"
         alignItems="unset"
-        justifyContent="unset"
         shrink="0"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Logo")}
-      ></Logo>
+        whiteSpace="pre-wrap"
+        children="Flavor Finder"
+        {...getOverrideProps(overrides, "Flavor Finder")}
+      ></Text>
       <Flex
         gap="14px"
         direction="row"
@@ -120,6 +133,9 @@ export default function Nav(props) {
                   bottom="0%"
                   left="0%"
                   right="0%"
+                  onClick={() => {
+                    baseOnClick();
+                  }}
                   {...getOverrideProps(overrides, "Base")}
                 ></Icon>
                 <Text
@@ -144,6 +160,9 @@ export default function Nav(props) {
                   padding="0px 0px 0px 0px"
                   whiteSpace="pre-wrap"
                   children="C"
+                  onClick={() => {
+                    cOnClick();
+                  }}
                   {...getOverrideProps(overrides, "C")}
                 ></Text>
               </View>
@@ -167,7 +186,7 @@ export default function Nav(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children="Christian Nwamba"
+              children="User signed-in"
               {...getOverrideProps(overrides, "Name")}
             ></Text>
           </Flex>

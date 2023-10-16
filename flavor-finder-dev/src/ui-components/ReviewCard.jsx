@@ -9,7 +9,7 @@ import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Divider, Flex, Text } from "@aws-amplify/ui-react";
 export default function ReviewCard(props) {
-  const { reviews, overrides, ...rest } = props;
+  const { reviews, restaurant, overrides, ...rest } = props;
   return (
     <Flex
       gap="0"
@@ -69,7 +69,7 @@ export default function ReviewCard(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children={reviews?.RestaurantName}
+            children={`${"Restaurant - "}${reviews?.RestaurantName}`}
             {...getOverrideProps(overrides, "Restaurant Name")}
           ></Text>
         </Flex>
@@ -103,7 +103,7 @@ export default function ReviewCard(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children={reviews?.rating}
+            children={`${reviews?.rating}${" *"}`}
             {...getOverrideProps(overrides, "Rating")}
           ></Text>
         </Flex>

@@ -48,7 +48,7 @@ export default function RestaurantCreateForm(props) {
     location: [],
     price: [],
     featues: [],
-    image: [{ type: "URL" }],
+    image: [],
   };
   const runValidationTasks = async (
     fieldName,

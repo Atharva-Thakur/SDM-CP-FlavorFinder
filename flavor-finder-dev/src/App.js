@@ -5,10 +5,10 @@ import { withAuthenticator } from '@aws-amplify/ui-react';
 
 function App({user}) {
   return (
-    <div>
+    <div margin="10px 10px 10px 10px">
       <Nav user = {user} width="100%" marginBottom='20px' />
       <div>
-        <h1>Available Restaurants-</h1>
+        <h1 margin="10px 10px 10px 10px">Available Restaurants-</h1>
         <ProductCardCollection />  
       </div>
       <div>

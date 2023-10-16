@@ -6,12 +6,11 @@
 
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { LogoProps } from "./Logo";
 import { FlexProps, IconProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type NavOverridesProps = {
     Nav?: PrimitiveOverrideProps<FlexProps>;
-    Logo?: LogoProps;
+    "Flavor Finder"?: PrimitiveOverrideProps<TextProps>;
     Menu?: PrimitiveOverrideProps<FlexProps>;
     User40531203?: PrimitiveOverrideProps<FlexProps>;
     User40531204?: PrimitiveOverrideProps<FlexProps>;

@@ -24,5 +24,6 @@ type Restaurant @model @auth(rules: [{allow: public}]) {
   location: String
   price: String
   featues: String
-  image: AWSURL
-} 
+  image: String
+}
+ 
