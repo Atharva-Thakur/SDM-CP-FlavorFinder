@@ -1,27 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
-import { Nav,  ProductCardCollection, RestaurantCreateForm, SuggestedRestaurantsCreateForm} from './ui-components'
-import { Routes, Route, Link } from "react-router-dom";
+import { Nav,  ProductCardCollection, ReviewCardCollection, ReviewsCreateForm, SuggestedRestaurantsCreateForm} from './ui-components'
 import { withAuthenticator } from '@aws-amplify/ui-react';
 
-<Routes>
-   <Route path="/" Component={<App />} />
-   <Route path="/product" element={<ProductCardCollection />} />
-   <Route path="/suggest" Component={<SuggestedRestaurantsCreateForm />} />
-</Routes>
 
 function App({user}) {
   return (
     <div>
       <Nav user = {user} width="100%" marginBottom='20px' />
       <div>
+        <h1>Available Restaurants-</h1>
         <ProductCardCollection />  
       </div>
       <div>
-        <RestaurantCreateForm />  
+        <h1>Search Reviews-</h1>
+        <ReviewCardCollection />  
       </div>
-      <h1>Suggest restaurant</h1>
       <div>
+        <h1>Write a Review-</h1>
+        <ReviewsCreateForm />  
+      </div>
+      <div>
+        <h1>Suggest a Restaurant</h1>
         <SuggestedRestaurantsCreateForm />  
       </div>
     </div>

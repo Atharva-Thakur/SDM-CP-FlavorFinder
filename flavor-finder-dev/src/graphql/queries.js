@@ -46,26 +46,14 @@ export const getReviews = /* GraphQL */ `
     getReviews(id: $id) {
       id
       rating
-      Restaurant {
-        id
-        name
-        location
-        price
-        featues
-        image
-        createdAt
-        updatedAt
-        __typename
-      }
+      RestaurantName
       reviewBody
       createdAt
       updatedAt
-      reviewsRestaurantId
       __typename
     }
   }
 `;
-
 export const listReviews = /* GraphQL */ `
   query ListReviews(
     $filter: ModelReviewsFilterInput
@@ -76,10 +64,10 @@ export const listReviews = /* GraphQL */ `
       items {
         id
         rating
+        RestaurantName
         reviewBody
         createdAt
         updatedAt
-        reviewsRestaurantId
         __typename
       }
       nextToken

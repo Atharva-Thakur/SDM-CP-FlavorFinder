@@ -23,7 +23,7 @@ export default function ReviewCardCollection(props) {
   const [loading, setLoading] = React.useState(true);
   const [maxViewed, setMaxViewed] = React.useState(1);
   const pageSize = 6;
-  const isPaginated = false;
+  const isPaginated = true;
   React.useEffect(() => {
     nextToken[instanceKey] = "";
     apiCache[instanceKey] = [];
@@ -48,7 +48,6 @@ export default function ReviewCardCollection(props) {
       setLoading(true);
       const variables = {
         limit: pageSize,
-        filter: { restaurantID: { eq: "restaurant" } },
       };
       if (newNext) {
         variables["nextToken"] = newNext;
@@ -81,8 +80,9 @@ export default function ReviewCardCollection(props) {
     <div>
       <Collection
         type="grid"
-        searchPlaceholder="Search..."
-        templateColumns="1fr 1fr"
+        isSearchable="true"
+        searchPlaceholder="Enter Restaurant..."
+        templateColumns="1fr 1fr 1fr"
         autoFlow="row"
         alignItems="stretch"
         justifyContent="stretch"

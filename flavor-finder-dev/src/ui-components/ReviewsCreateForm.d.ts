@@ -14,16 +14,19 @@ export declare type ValidationResponse = {
 export declare type ValidationFunction<T> = (value: T, validationResponse: ValidationResponse) => ValidationResponse | Promise<ValidationResponse>;
 export declare type ReviewsCreateFormInputValues = {
     rating?: number;
+    RestaurantName?: string;
     reviewBody?: string;
 };
 export declare type ReviewsCreateFormValidationValues = {
     rating?: ValidationFunction<number>;
+    RestaurantName?: ValidationFunction<string>;
     reviewBody?: ValidationFunction<string>;
 };
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type ReviewsCreateFormOverridesProps = {
     ReviewsCreateFormGrid?: PrimitiveOverrideProps<GridProps>;
     rating?: PrimitiveOverrideProps<TextFieldProps>;
+    RestaurantName?: PrimitiveOverrideProps<TextFieldProps>;
     reviewBody?: PrimitiveOverrideProps<TextFieldProps>;
 } & EscapeHatchProps;
 export declare type ReviewsCreateFormProps = React.PropsWithChildren<{

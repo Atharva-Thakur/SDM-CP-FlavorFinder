@@ -60,21 +60,10 @@ export const createReviews = /* GraphQL */ `
     createReviews(input: $input, condition: $condition) {
       id
       rating
-      Restaurant {
-        id
-        name
-        location
-        price
-        featues
-        image
-        createdAt
-        updatedAt
-        __typename
-      }
+      RestaurantName
       reviewBody
       createdAt
       updatedAt
-      reviewsRestaurantId
       __typename
     }
   }
@@ -87,21 +76,10 @@ export const updateReviews = /* GraphQL */ `
     updateReviews(input: $input, condition: $condition) {
       id
       rating
-      Restaurant {
-        id
-        name
-        location
-        price
-        featues
-        image
-        createdAt
-        updatedAt
-        __typename
-      }
+      RestaurantName
       reviewBody
       createdAt
       updatedAt
-      reviewsRestaurantId
       __typename
     }
   }
@@ -114,21 +92,10 @@ export const deleteReviews = /* GraphQL */ `
     deleteReviews(input: $input, condition: $condition) {
       id
       rating
-      Restaurant {
-        id
-        name
-        location
-        price
-        featues
-        image
-        createdAt
-        updatedAt
-        __typename
-      }
+      RestaurantName
       reviewBody
       createdAt
       updatedAt
-      reviewsRestaurantId
       __typename
     }
   }

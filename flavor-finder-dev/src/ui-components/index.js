@@ -15,6 +15,8 @@ export { default as RestaurantCreateForm } from "./RestaurantCreateForm";
 export { default as RestaurantUpdateForm } from "./RestaurantUpdateForm";
 export { default as ReviewCard } from "./ReviewCard";
 export { default as ReviewCardCollection } from "./ReviewCardCollection";
+export { default as ReviewsCreateForm } from "./ReviewsCreateForm";
+export { default as ReviewsUpdateForm } from "./ReviewsUpdateForm";
 export { default as SuggestedRestaurantsCreateForm } from "./SuggestedRestaurantsCreateForm";
 export { default as SuggestedRestaurantsUpdateForm } from "./SuggestedRestaurantsUpdateForm";
 export { default as UserCreateForm } from "./UserCreateForm";

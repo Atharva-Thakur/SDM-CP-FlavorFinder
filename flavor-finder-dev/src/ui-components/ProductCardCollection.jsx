@@ -82,7 +82,7 @@ export default function ProductCardCollection(props) {
         type="grid"
         isSearchable={true}
         searchPlaceholder="Search..."
-        templateColumns="1fr 1fr"
+        templateColumns="1fr 1fr 1fr"
         autoFlow="row"
         alignItems="stretch"
         justifyContent="stretch"

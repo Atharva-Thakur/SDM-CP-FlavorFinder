@@ -11,15 +11,15 @@ export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes
 export declare type ReviewCardOverridesProps = {
     ReviewCard?: PrimitiveOverrideProps<FlexProps>;
     "Card Area"?: PrimitiveOverrideProps<FlexProps>;
-    "Bottom Row"?: PrimitiveOverrideProps<FlexProps>;
+    "Bottom Row4060849"?: PrimitiveOverrideProps<FlexProps>;
+    "Restaurant Name"?: PrimitiveOverrideProps<TextProps>;
+    "Bottom Row4075658"?: PrimitiveOverrideProps<FlexProps>;
     Rating?: PrimitiveOverrideProps<TextProps>;
     "Review Content"?: PrimitiveOverrideProps<TextProps>;
     Divider?: PrimitiveOverrideProps<DividerProps>;
 } & EscapeHatchProps;
 export declare type ReviewCardProps = React.PropsWithChildren<Partial<FlexProps> & {
     reviews?: any;
-    restaurant?: any;
-    restaurantid?: String;
 } & {
     overrides?: ReviewCardOverridesProps | undefined | null;
 }>;

@@ -6,14 +6,13 @@
 
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { ButtonProps, DividerProps, FlexProps, IconProps, ImageProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
+import { DividerProps, FlexProps, IconProps, ImageProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type ProductCardOverridesProps = {
     ProductCard?: PrimitiveOverrideProps<ViewProps>;
     Name?: PrimitiveOverrideProps<TextProps>;
     "image 1"?: PrimitiveOverrideProps<ImageProps>;
     Location?: PrimitiveOverrideProps<TextProps>;
-    Button4062889?: PrimitiveOverrideProps<ButtonProps>;
     Price?: PrimitiveOverrideProps<TextProps>;
     Divider?: PrimitiveOverrideProps<DividerProps>;
     Features?: PrimitiveOverrideProps<FlexProps>;
@@ -21,7 +20,6 @@ export declare type ProductCardOverridesProps = {
     Icon?: PrimitiveOverrideProps<ViewProps>;
     Vector?: PrimitiveOverrideProps<IconProps>;
     Fast?: PrimitiveOverrideProps<TextProps>;
-    Button4062904?: PrimitiveOverrideProps<ButtonProps>;
 } & EscapeHatchProps;
 export declare type ProductCardProps = React.PropsWithChildren<Partial<ViewProps> & {
     restaurant?: any;

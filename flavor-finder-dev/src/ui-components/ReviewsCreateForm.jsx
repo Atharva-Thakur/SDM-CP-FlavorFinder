@@ -24,18 +24,24 @@ export default function ReviewsCreateForm(props) {
   } = props;
   const initialValues = {
     rating: "",
+    RestaurantName: "",
     reviewBody: "",
   };
   const [rating, setRating] = React.useState(initialValues.rating);
+  const [RestaurantName, setRestaurantName] = React.useState(
+    initialValues.RestaurantName
+  );
   const [reviewBody, setReviewBody] = React.useState(initialValues.reviewBody);
   const [errors, setErrors] = React.useState({});
   const resetStateValues = () => {
     setRating(initialValues.rating);
+    setRestaurantName(initialValues.RestaurantName);
     setReviewBody(initialValues.reviewBody);
     setErrors({});
   };
   const validations = {
     rating: [],
+    RestaurantName: [],
     reviewBody: [],
   };
   const runValidationTasks = async (
@@ -65,6 +71,7 @@ export default function ReviewsCreateForm(props) {
         event.preventDefault();
         let modelFields = {
           rating,
+          RestaurantName,
           reviewBody,
         };
         const validationResponses = await Promise.all(
@@ -133,6 +140,7 @@ export default function ReviewsCreateForm(props) {
           if (onChange) {
             const modelFields = {
               rating: value,
+              RestaurantName,
               reviewBody,
             };
             const result = onChange(modelFields);
@@ -149,6 +157,32 @@ export default function ReviewsCreateForm(props) {
         {...getOverrideProps(overrides, "rating")}
       ></TextField>
       <TextField
+        label="Restaurant name"
+        isRequired={false}
+        isReadOnly={false}
+        value={RestaurantName}
+        onChange={(e) => {
+          let { value } = e.target;
+          if (onChange) {
+            const modelFields = {
+              rating,
+              RestaurantName: value,
+              reviewBody,
+            };
+            const result = onChange(modelFields);
+            value = result?.RestaurantName ?? value;
+          }
+          if (errors.RestaurantName?.hasError) {
+            runValidationTasks("RestaurantName", value);
+          }
+          setRestaurantName(value);
+        }}
+        onBlur={() => runValidationTasks("RestaurantName", RestaurantName)}
+        errorMessage={errors.RestaurantName?.errorMessage}
+        hasError={errors.RestaurantName?.hasError}
+        {...getOverrideProps(overrides, "RestaurantName")}
+      ></TextField>
+      <TextField
         label="Review body"
         isRequired={false}
         isReadOnly={false}
@@ -158,6 +192,7 @@ export default function ReviewsCreateForm(props) {
           if (onChange) {
             const modelFields = {
               rating,
+              RestaurantName,
               reviewBody: value,
             };
             const result = onChange(modelFields);

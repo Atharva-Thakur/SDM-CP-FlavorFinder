@@ -6,29 +6,14 @@
 
 /* eslint-disable */
 import * as React from "react";
-import {
-  getOverrideProps,
-  useNavigateAction,
-} from "@aws-amplify/ui-react/internal";
-import {
-  Button,
-  Divider,
-  Flex,
-  Icon,
-  Image,
-  Text,
-  View,
-} from "@aws-amplify/ui-react";
+import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import { Divider, Flex, Icon, Image, Text, View } from "@aws-amplify/ui-react";
 export default function ProductCard(props) {
   const { restaurant, overrides, ...rest } = props;
-  const buttonFourZeroSixTwoEightEightNineOnClick = useNavigateAction({
-    type: "url",
-    url: `${"https://dev.dilqmvklps74h.amplifyapp.com/"}${restaurant?.Reviews}`,
-  });
   return (
     <View
-      width="669px"
-      height="329px"
+      width="572px"
+      height="299px"
       display="block"
       gap="unset"
       alignItems="unset"
@@ -42,7 +27,7 @@ export default function ProductCard(props) {
     >
       <Text
         fontFamily="Inter"
-        fontSize="20px"
+        fontSize="24px"
         fontWeight="700"
         color="rgba(255,255,255,1)"
         lineHeight="25px"
@@ -55,7 +40,7 @@ export default function ProductCard(props) {
         gap="unset"
         alignItems="unset"
         position="absolute"
-        top="44px"
+        top="71px"
         left="42px"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
@@ -70,8 +55,8 @@ export default function ProductCard(props) {
         alignItems="unset"
         justifyContent="unset"
         position="absolute"
-        top="23px"
-        left="419px"
+        top="15px"
+        left="338px"
         borderRadius="256px"
         padding="0px 0px 0px 0px"
         objectFit="cover"
@@ -80,7 +65,7 @@ export default function ProductCard(props) {
       ></Image>
       <Text
         fontFamily="Inter"
-        fontSize="16px"
+        fontSize="20px"
         fontWeight="400"
         color="rgba(255,255,255,1)"
         lineHeight="24px"
@@ -88,37 +73,22 @@ export default function ProductCard(props) {
         display="block"
         direction="column"
         justifyContent="unset"
-        letterSpacing="0.01px"
+        letterSpacing="0.05px"
         width="285px"
         height="unset"
         gap="unset"
         alignItems="unset"
         position="absolute"
-        top="88px"
+        top="129px"
         left="42px"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
         children={restaurant?.location}
         {...getOverrideProps(overrides, "Location")}
       ></Text>
-      <Button
-        width="unset"
-        height="unset"
-        position="absolute"
-        top="182px"
-        left="42px"
-        size="default"
-        isDisabled={false}
-        variation="link"
-        children="Reviews"
-        onClick={() => {
-          buttonFourZeroSixTwoEightEightNineOnClick();
-        }}
-        {...getOverrideProps(overrides, "Button4062889")}
-      ></Button>
       <Text
         fontFamily="Inter"
-        fontSize="16px"
+        fontSize="20px"
         fontWeight="400"
         color="rgba(255,255,255,1)"
         lineHeight="24px"
@@ -126,13 +96,13 @@ export default function ProductCard(props) {
         display="block"
         direction="column"
         justifyContent="unset"
-        letterSpacing="0.01px"
+        letterSpacing="0.05px"
         width="222px"
         height="unset"
         gap="unset"
         alignItems="unset"
         position="absolute"
-        top="131px"
+        top="176px"
         left="42px"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
@@ -140,11 +110,11 @@ export default function ProductCard(props) {
         {...getOverrideProps(overrides, "Price")}
       ></Text>
       <Divider
-        width="605px"
-        height="1px"
+        width="525px"
+        height="2px"
         position="absolute"
-        top="259px"
-        left="42px"
+        top="237px"
+        left="23px"
         size="small"
         orientation="horizontal"
         {...getOverrideProps(overrides, "Divider")}
@@ -157,8 +127,8 @@ export default function ProductCard(props) {
         justifyContent="flex-start"
         alignItems="flex-start"
         position="absolute"
-        top="284px"
-        left="42px"
+        top="258px"
+        left="41px"
         padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "Features")}
       >
@@ -239,18 +209,6 @@ export default function ProductCard(props) {
           ></Text>
         </Flex>
       </Flex>
-      <Button
-        width="unset"
-        height="unset"
-        position="absolute"
-        top="182px"
-        left="191px"
-        size="default"
-        isDisabled={false}
-        variation="link"
-        children="Write a review"
-        {...getOverrideProps(overrides, "Button4062904")}
-      ></Button>
     </View>
   );
 }

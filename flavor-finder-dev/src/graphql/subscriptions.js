@@ -54,21 +54,10 @@ export const onCreateReviews = /* GraphQL */ `
     onCreateReviews(filter: $filter) {
       id
       rating
-      Restaurant {
-        id
-        name
-        location
-        price
-        featues
-        image
-        createdAt
-        updatedAt
-        __typename
-      }
+      RestaurantName
       reviewBody
       createdAt
       updatedAt
-      reviewsRestaurantId
       __typename
     }
   }
@@ -78,21 +67,10 @@ export const onUpdateReviews = /* GraphQL */ `
     onUpdateReviews(filter: $filter) {
       id
       rating
-      Restaurant {
-        id
-        name
-        location
-        price
-        featues
-        image
-        createdAt
-        updatedAt
-        __typename
-      }
+      RestaurantName
       reviewBody
       createdAt
       updatedAt
-      reviewsRestaurantId
       __typename
     }
   }
@@ -102,21 +80,10 @@ export const onDeleteReviews = /* GraphQL */ `
     onDeleteReviews(filter: $filter) {
       id
       rating
-      Restaurant {
-        id
-        name
-        location
-        price
-        featues
-        image
-        createdAt
-        updatedAt
-        __typename
-      }
+      RestaurantName
       reviewBody
       createdAt
       updatedAt
-      reviewsRestaurantId
       __typename
     }
   }
