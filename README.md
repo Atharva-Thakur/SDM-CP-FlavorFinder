@@ -1,1 +1,1 @@
-# SDM-CP-FlavorFinder
+# Setting up Github Actions
