@@ -48,6 +48,7 @@ export default function ReviewCardCollection(props) {
       setLoading(true);
       const variables = {
         limit: pageSize,
+        filter: { restaurantID: { eq: "restaurant" } },
       };
       if (newNext) {
         variables["nextToken"] = newNext;

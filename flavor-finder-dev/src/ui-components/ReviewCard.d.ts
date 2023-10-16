@@ -18,6 +18,8 @@ export declare type ReviewCardOverridesProps = {
 } & EscapeHatchProps;
 export declare type ReviewCardProps = React.PropsWithChildren<Partial<FlexProps> & {
     reviews?: any;
+    restaurant?: any;
+    restaurantid?: String;
 } & {
     overrides?: ReviewCardOverridesProps | undefined | null;
 }>;

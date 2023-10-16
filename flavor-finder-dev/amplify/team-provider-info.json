@@ -10,6 +10,11 @@
       "StackName": "amplify-flavorfinderdev-staging-122859",
       "StackId": "arn:aws:cloudformation:us-east-1:406929768751:stack/amplify-flavorfinderdev-staging-122859/6af2f190-6b56-11ee-bdf5-0e75e3c8567d",
       "AmplifyAppId": "dilqmvklps74h"
+    },
+    "categories": {
+      "auth": {
+        "flavorfinderdev": {}
+      }
     }
   }
 }

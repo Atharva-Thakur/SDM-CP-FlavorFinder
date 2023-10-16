@@ -11,6 +11,7 @@ type Reviews @model @auth(rules: [{allow: public}]) {
   rating: Int
   reviewBody: String
   Restaurant: Restaurant @belongsTo
+  restaurantID: ID! @index(name: "byRestaurant")
 }
 
 type User @model @auth(rules: [{allow: public}]) {
@@ -25,6 +26,6 @@ type Restaurant @model @auth(rules: [{allow: public}]) {
   price: String
   featues: String
   image: AWSURL
-  Reviews: Reviews @hasOne
+  Reviews: [Reviews] @hasMany(indexName: "byRestaurant", fields: ["id"])
 }
  

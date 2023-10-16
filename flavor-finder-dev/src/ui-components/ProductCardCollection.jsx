@@ -99,7 +99,6 @@ export default function ProductCardCollection(props) {
           return (
             <ProductCard
               restaurant={item}
-              margin="10px 10px 10px 10px"
               key={item.id}
               {...(overrideItems && overrideItems({ item, index }))}
             ></ProductCard>

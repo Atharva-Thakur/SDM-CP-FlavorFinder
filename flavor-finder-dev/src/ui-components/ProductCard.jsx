@@ -6,7 +6,10 @@
 
 /* eslint-disable */
 import * as React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import {
+  getOverrideProps,
+  useNavigateAction,
+} from "@aws-amplify/ui-react/internal";
 import {
   Button,
   Divider,
@@ -18,6 +21,10 @@ import {
 } from "@aws-amplify/ui-react";
 export default function ProductCard(props) {
   const { restaurant, overrides, ...rest } = props;
+  const buttonFourZeroSixTwoEightEightNineOnClick = useNavigateAction({
+    type: "url",
+    url: `${"https://dev.dilqmvklps74h.amplifyapp.com/"}${restaurant?.Reviews}`,
+  });
   return (
     <View
       width="669px"
@@ -104,6 +111,9 @@ export default function ProductCard(props) {
         isDisabled={false}
         variation="link"
         children="Reviews"
+        onClick={() => {
+          buttonFourZeroSixTwoEightEightNineOnClick();
+        }}
         {...getOverrideProps(overrides, "Button4062889")}
       ></Button>
       <Text

@@ -37,6 +37,7 @@ export default function Logo(props) {
         right="0%"
         padding="0px 0px 0px 0px"
         objectFit="cover"
+        src="https://unsplash.com/photos/kcA-c3f_3FE"
         {...getOverrideProps(overrides, "image 5")}
       ></Image>
     </View>

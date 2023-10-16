@@ -9,7 +9,7 @@ import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Divider, Flex, Text } from "@aws-amplify/ui-react";
 export default function ReviewCard(props) {
-  const { reviews, overrides, ...rest } = props;
+  const { reviews, restaurant, restaurantid, overrides, ...rest } = props;
   return (
     <Flex
       gap="0"

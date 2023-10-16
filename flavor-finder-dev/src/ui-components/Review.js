@@ -1,56 +1,76 @@
-import React from 'react'
-import { css } from 'glamor'
+// import { useEffect, useState } from "react";
+import { DataStore, Predicates } from "@aws-amplify/datastore";
+// import { Box, Text } from '@chakra-ui/react'
+import { Reviews } from "../models";
 
-class Reviews extends React.Component {
+// export function Review({ RestaurantID }) {
+//   const [reviews, setReviews] = useState([])
+
+//   useEffect(() => {
+//     const getReviews = async () => {
+//       const postReviews = await DataStore.query(Reviews, r => r.Restaurant.eq(RestaurantID))
+//       setReviews(postReviews)
+//     }
+//     getReviews()
+//   }, [RestaurantID])
+
+//   return (
+//     <Box>
+//       {reviews.map(review => (
+//         <Text key={review.id}>
+//           <Text key={review.id}>
+//             <Text as='b'>{review.rating}</Text>
+//             {review.reviewBody}
+//           </Text>
+//         </Text>
+//       ))}
+//     </Box>
+//   )
+// }
+
+import React, { Component } from 'react';
+import { API, graphqlOperation } from 'aws-amplify'; // You may need to adjust this import based on your GraphQL client library
+
+// Define your GraphQL query to fetch reviews for a specific restaurant
+const getReviewsForRestaurant = await DataStore.query(Reviews, r => r.Restaurant.eq(restaurantId));
+
+class RestaurantReviews extends Component {
+  state = {
+    reviews: [],
+  };
+
+  async componentDidMount() {
+    try {
+      // Fetch reviews for the specific restaurant passed as a prop
+      const { data } = await API.graphql(
+        graphqlOperation(getReviewsForRestaurant, { id: this.props.restaurantId })
+      );
+
+      this.setState({ reviews: data.getReviewsForRestaurant });
+    } catch (error) {
+      console.error('Error fetching reviews:', error);
+    }
+  }
+
   render() {
-    const { closeModal, restaurant } = this.props
-    console.log('restaurant:', restaurant)
+    const { reviews } = this.state;
+
     return (
-      <div {...css(styles.overlay)}>
-        <div {...css(styles.container)}>
-          <h1>{restaurant.name}</h1>
-          {
-            restaurant.reviews.items.map((r, i) => (
-              <div {...css(styles.review)} key={i}>
-                <p {...css(styles.text)}>{r.text}</p>
-                <p {...css(styles.rating)}>Stars: {r.rating}</p>
-              </div>
-            ))
-          }
-          <p onClick={closeModal}>Close</p>
-        </div>
+      <div>
+        <h2>Reviews for the {this.props.restaurantName}</h2>
+        <ul>
+          {reviews.map((review) => (
+            <li key={review.id}>
+              <h3>Rating: {review.rating}</h3>
+              <p>{review.reviewBody}</p>
+            </li>
+          ))}
+        </ul>
       </div>
-    )
+    );
   }
 }
 
-const styles = {
-  text: {
-    fontWeight: '500',
-    fontSize: 18,
-    marginBottom: 5
-  },
-  rating: {
-    marginTop: 5,
-    color: 'rgba(0, 0, 0, .6)'
-  },
-  review: {
-    borderBottom: '2px solid #00796B'
-  },
-  container: {
-    padding: '0px 20px'
-  },
-  overlay: {
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    backgroundColor: '#ededed',
-    zIndex: 1,
-    width: '100vw',
-    height: '100vh'
-  },
-}
+export default RestaurantReviews;
 
-export default Reviews
+

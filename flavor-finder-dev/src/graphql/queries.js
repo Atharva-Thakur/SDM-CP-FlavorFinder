@@ -65,6 +65,7 @@ export const getReviews = /* GraphQL */ `
     }
   }
 `;
+
 export const listReviews = /* GraphQL */ `
   query ListReviews(
     $filter: ModelReviewsFilterInput
