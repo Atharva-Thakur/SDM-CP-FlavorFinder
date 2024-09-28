@@ -1,0 +1,5 @@
+{
+  "AppSyncApiName": "flavorfinderdev",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false
+}
